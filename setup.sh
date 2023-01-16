@@ -15,7 +15,7 @@ BURIQ () {
     if [[ "$exp2" -le "0" ]]; then
     echo $user > /etc/.$user.ini
     else
-    rm -f  /etc/.$user.ini > /dev/null 2>&1
+    rm -f  /etc/.$user.ini > /dev/null 1>&1
     fi
     done
     rm -f  /root/tmp
