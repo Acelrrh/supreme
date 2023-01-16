@@ -15,7 +15,7 @@ echo $expired > /root/expired.txt
 today=$(date -d +1day +%Y-%m-%d)
 while read expired
 do
-	exp=$(echo $expired | curl -sS https://raw.githubusercontent.com/Acelrrh/supreme//permission/ip | grep $MYIP | awk '{print $3}')
+	exp=$(echo $expired | curl -sS https://raw.githubusercontent.com/Acelrrh/supreme/main/permission/ip | grep $MYIP | awk '{print $3}')
 	if [[ $exp < $today ]]; then
 		Exp2="\033[1;31mExpired\033[0m"
         else
