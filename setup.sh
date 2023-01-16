@@ -11,12 +11,6 @@ BURIQ () {
     exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
     d1=(`date -d "$exp" +%s`)
     d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
-    if [[ "$exp2" -le "0" ]]; then
-    echo $user > /etc/.$user.ini
-    else
-    rm -f  /etc/.$user.ini > /dev/null 1>&1
-    fi
     done
     rm -f  /root/tmp
 }
